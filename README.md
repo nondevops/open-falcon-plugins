@@ -16,58 +16,27 @@ agent服务端口为11988;
 ## 脚本介绍
 
 ``` bash
-.
-├── README.md # 本项目自述文件
-├── cachecloud # cachecloud 监控脚本,如自身业务在使用cachecloud做缓存,参照此脚本配置;
-│   └── README.md
-├── cert # 证书过期 监控脚本;
-│   ├── 60_cert_expire_time_monitor.py
-│   └── 60_cert_expire_time_monitor.sh
-├── domain # 域名过期 监控脚本;
-│   └── 60_domain_expire_time_monitor.sh
-├── haproxy # haproxy 监控脚本;
-│   ├── 60_haproxy-monitor.py
-│   └── README.md
-├── hardware # 硬件 监控脚本;
-│   ├── 60_hw_dell_monitor.py
-│   ├── 60_raid_monitor.py
-│   └── hwcheck-no-use.py
-├── lvs # lvs 监控脚本;
-│   └── 60_lvs_monitor.py
-├── memcached # memcached 监控脚本;
-│   ├── 60_memcached-monitor.py
-│   └── README.md
-├── mongodb # mongodb 监控脚本;
-│   └── 60_mongodb_monitor.py
-├── nginx # nginx 监控脚本;
-│   ├── nginx-status-monitor
-│   │   ├── 60_nginx-status-monitor.py
-│   │   └── README.md
-│   └── nginx-upstream-monitor
-│       ├── 60_nginx_upstream-status-monitor.py
-│       └── README.md
-├── powerdns # powerdns 监控脚本;
-│   └── 60_powerdns_monitor.py
-├── rabbitmq # powrabbitmqerdns 监控脚本;
-│   └── 60_rabbitmq_monitor.py
-├── redis # redis 监控脚本;
-│   └── 60_redis_monitor.py
-├── squid # squid 监控脚本;
-│   └── 60_squid_monitor.py
-├── sys # 系统级 监控脚本;
-│   ├── disk # 磁盘读写测试 监控脚本;
-│   │   └── 60_mountpoint_rw_test.py
-│   ├── mail # 邮件队列 监控脚本;
-│   │   └── \ 60_mailqueue.py
-│   ├── ntp # 时间同步 监控脚本;
-│   │   └── 600_ntp_monitor.py
-│   ├── ping # ping 监控脚本;
-│   │   ├── 60_ping_cmdb_inner_instance_ip_monitor.sh
-│   │   └── 60_ping_other_ip_monitor.py
-│   └── proc-resource # 进程资源消耗 监控脚本;
-│       └── 60_proc_resource_monitor.py
-└── zookeeper # zookeeper 监控脚本;
-    └── 60_zookeeper_monitor.py
+cachecloud # cachecloud 监控,soho开源的redis管理平台
+ceph # ceph 监控
+cert # 证书过期 监控
+domain # 域名过期 监控
+es # es 监控
+hadoop # hadoop 监控
+haproxy # haproxy 监控
+hardware # hardware 监控
+lvs # lvs 监控
+memcached # memcached 监控
+mongodb # mongodb 监控
+nginx # nginx 监控
+powerdns # powerdns 监控
+public-cloud # 公有云 监控,如ELB数据
+rabbitmq # rabbitmq 监控
+redis # redis 监控
+solr # solr 监控
+squid # squid 监控
+sys # 系统级 监控
+zookeeper # zookeeper 监控
+
 ```
 
 ## 克隆代码
