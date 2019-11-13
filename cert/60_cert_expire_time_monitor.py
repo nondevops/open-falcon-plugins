@@ -32,15 +32,7 @@ import json
 
 domain_list = [
 'baidu.com',
-'zbj.com',
-'chatm.com',
-'www.chinazhyc.com',
-'kubanquan.com',
-'op.zhubajie.la',
-'open.kubanquan.com',
-'token.kubanquan.com',
-'www.kubanquan.com',
-'as.zbjimg.com']
+]
 
 timestamp = int(time.time())
 step = 60

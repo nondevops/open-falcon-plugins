@@ -4,25 +4,6 @@
 
 domain_list=(
 baidu.com
-zbj.com
-chatm.com
-www.chinazhyc.com
-kubanquan.com
-op.zhubajie.la
-open.kubanquan.com
-token.kubanquan.com
-www.kubanquan.com
-as.zbjimg.com
-
-#zbjwork.com
-#zomwork.com
-#zhubajie.la
-#ue.zhubajie.la
-#v2.web.ue.zhubajie.la
-#lizhi426.com
-#login.zhubajie.com
-#fw-chain.com
-#bjren123.com
 )
 
 function check_ssl(){
@@ -30,7 +11,7 @@ domain=$1
 ts=$(date +%s)
 host_name=`cat /opt/open-falcon-agent/config/open-falcon-agent-cfg.json | grep -v "grep" | grep "hostname" | awk -F ":" '{print $2}' | awk -F '"' '{print $2}'`
 #ip_address=`cat /opt/open-falcon-agent/config/open-falcon-agent-cfg.json | grep -v "grep" | grep "hostname" | awk -F ":" '{print $2}' | awk -F '"' '{print $2}' | awk -F "[" '{print $2}' | awk -F ']' '{print $1}'`
-step="60"
+step="600"
 counterType="GAUGE"
 
 ping -c1 223.5.5.5 &> /dev/null

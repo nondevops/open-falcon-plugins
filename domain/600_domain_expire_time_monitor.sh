@@ -14,13 +14,7 @@ is_install_whois
 
 # 定义需要被检测的域名列表
 domain_list=(
-tianpeng.com
-zbj.com
-chatm.com
-chinazhyc.com
-kubanquan.com
-zhubajie.la
-as.zbjimg.com
+baidu.com
 )
 
 function check_domain(){
@@ -29,7 +23,7 @@ domain=$1
 ts=$(date +%s)
 host_name=`cat /opt/open-falcon-agent/config/open-falcon-agent-cfg.json | grep -v "grep" | grep "hostname" | awk -F ":" '{print $2}' | awk -F '"' '{print $2}'`
 #ip_address=`cat /opt/open-falcon-agent/config/open-falcon-agent-cfg.json | grep -v "grep" | grep "hostname" | awk -F ":" '{print $2}' | awk -F '"' '{print $2}' | awk -F "[" '{print $2}' | awk -F ']' '{print $1}'`
-step="60"
+step="600"
 counterType="GAUGE"
 
 ping -c1 223.5.5.5 &> /dev/null
@@ -62,7 +56,7 @@ if [ $? -eq 0 ];then
     domain_expire_days=$[$[$END_TIME_STAMP-$NOW_TIME_STAMP]/86400]
     #echo "${i}域名离域名到期时间还有${domain_expire_days}天.请注意续费域名..."
     #echo "======================================================"
-    metrics="{\"metric\": \"domain.expiredays\", \"endpoint\": \"${host_name}\", \"timestamp\": ${ts},\"step\": ${step},\"value\": ${domain_expire_days},\"counterType\": \"${counterType}\",\"tags\": \"domain_name=${i}\"}"
+    metrics="{\"metric\": \"domain.expiredays\", \"endpoint\": \"${host_name}\", \"timestamp\": ${ts},\"step\": ${step},\"value\": ${domain_expire_days},\"counterType\": \"${counterType}\",\"tags\": \"domain_name=${domain}\"}"
     echo "$metrics"
 fi
 }
