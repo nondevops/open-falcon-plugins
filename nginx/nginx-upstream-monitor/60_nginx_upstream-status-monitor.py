@@ -59,7 +59,7 @@ def get_nginx_status():
 
 
 def get_down_upstream():
-    url = 'http://%s/Zbj_Check_Status?format=json' % ip
+    url = 'http://%s/_Check_Status?format=json' % ip
     try:
         response = requests.get(url, timeout=1)
 
