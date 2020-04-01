@@ -3,7 +3,7 @@
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
 
 # 全局变量
-endpoint="cq-dubbo-zookeeper.0903261015.perf.zbj[10.200.75.19]"
+endpoint="cq-dubbo-zookeeper.0903261015.perf.bj[10.200.75.19]"
 timenow=`date +%s`
 valuetype="GAUGE"
 step="60"
