@@ -36,6 +36,8 @@ solr # solr 监控
 squid # squid 监控
 sys # 系统级 监控
 zookeeper # zookeeper 监控
+.....(脚本太多直接clone下来慢慢看吧)
+
 
 ```
 
@@ -67,6 +69,10 @@ git clone https://github.com/nondevops/open-falcon-plugins.git
 
 ``` text
 根据自身的监控指标来设置
+```
+## 意见和交流
+```
+如对脚本有疑问或有错误,欢迎提PR,大家共同维护
 ```
 
 ## 欢迎访问我的博客
